@@ -39,6 +39,7 @@ public class telaswing extends javax.swing.JFrame {
         lblResultado = new javax.swing.JLabel();
         rbtSoma = new javax.swing.JRadioButton();
         rbtSub = new javax.swing.JRadioButton();
+        rbtMult = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CalculadoraSwing");
@@ -75,6 +76,9 @@ public class telaswing extends javax.swing.JFrame {
         rbtSub.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtSub.setText("Subtração");
 
+        rbtMult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtMult.setText("Multiplicação");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -101,13 +105,16 @@ public class telaswing extends javax.swing.JFrame {
                         .addComponent(rbtSoma))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(rbtSub)))
+                        .addComponent(rbtSub))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(rbtMult)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -122,7 +129,9 @@ public class telaswing extends javax.swing.JFrame {
                 .addComponent(rbtSoma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbtSub)
-                .addGap(96, 96, 96))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbtMult)
+                .addGap(70, 70, 70))
         );
 
         pack();
@@ -141,11 +150,11 @@ public class telaswing extends javax.swing.JFrame {
                 r=n1+n2;
             }else if (rbtSub.isSelected()){
                 r=n1-n2;
-            }/*else if(rbtMult.isSelected()){
+            }else if(rbtMult.isSelected()){
                 r=n1*n2;
-            }else if (rbtDiv.isSelected()){
+            }/*else if (rbtDiv.isSelected()){
                 r=n1/n2;
-            }/*else if (rbtExp.isSelected()){
+            }*else if (rbtExp.isSelected()){
                 r=Math.pow(n1, n2));
             }*/
         
@@ -197,6 +206,7 @@ public class telaswing extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel lblResultado;
+    private javax.swing.JRadioButton rbtMult;
     private javax.swing.JRadioButton rbtSoma;
     private javax.swing.JRadioButton rbtSub;
     private javax.swing.JTextField txtN1;
