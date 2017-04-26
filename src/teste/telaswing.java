@@ -188,7 +188,7 @@ public class telaswing extends javax.swing.JFrame {
         }else{
         int n1 = Integer.parseInt(txtN1.getText());
         int n2 = Integer.parseInt(txtN2.getText());
-        int r=0;
+        int r = 0;
             if (rbtSoma.isSelected()){
                 r=n1+n2;
             }else if (rbtSub.isSelected()){
@@ -196,15 +196,20 @@ public class telaswing extends javax.swing.JFrame {
             }else if(rbtMult.isSelected()){
                 r=n1*n2;
             }else if (rbtDiv.isSelected()){
+                if (n2==0){
+            JOptionPane.showMessageDialog(null,"Impossível dividir por zero. Por favor altere o campo valor 2");
+                }else{
                 r=n1/n2;
+                }
             }else if (rbtExp.isSelected()){
                 r= (int)Math.pow(n1, n2);
             }
         if(rbtSoma.isSelected()==true||rbtSub.isSelected()==true||rbtMult.isSelected()==true||rbtDiv.isSelected()==true||rbtExp.isSelected()==true){
-            lblResultado.setText(Integer.toString(r));
+            lblResultado.setText(Integer.toString(r));  
+        
         }else{
-                JOptionPane.showMessageDialog(null,"Selecione ao menos um dos operadores");
-            }
+            JOptionPane.showMessageDialog(null,"Selecione ao menos um dos operadores");
+        }
     }//GEN-LAST:event_btnCalcActionPerformed
 }
     /**
