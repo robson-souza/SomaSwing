@@ -37,8 +37,13 @@ public class telaswing extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         btnCalc = new javax.swing.JButton();
         lblResultado = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         rbtSoma = new javax.swing.JRadioButton();
         rbtSub = new javax.swing.JRadioButton();
+        rbtMult = new javax.swing.JRadioButton();
+        rbtDiv = new javax.swing.JRadioButton();
+        rbtExp = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CalculadoraSwing");
@@ -69,11 +74,57 @@ public class telaswing extends javax.swing.JFrame {
         lblResultado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblResultado.setText("Resultado");
 
+        btgopera.add(rbtSoma);
         rbtSoma.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtSoma.setText("Soma");
 
+        btgopera.add(rbtSub);
         rbtSub.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtSub.setText("Subtração");
+
+        btgopera.add(rbtMult);
+        rbtMult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtMult.setText("Multiplicação");
+
+        btgopera.add(rbtDiv);
+        rbtDiv.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtDiv.setText("Divisão");
+
+        btgopera.add(rbtExp);
+        rbtExp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtExp.setText("Exponenciação");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbtSoma)
+                    .addComponent(rbtSub)
+                    .addComponent(rbtMult)
+                    .addComponent(rbtDiv)
+                    .addComponent(rbtExp))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(rbtSoma)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtSub)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtMult)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbtDiv)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtExp)
+                .addGap(0, 17, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel1.setText("Operações");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,31 +134,32 @@ public class telaswing extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
-                            .addComponent(txtN1))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                            .addComponent(txtN2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCalc)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblResultado)))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+                                    .addComponent(txtN1))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtN2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(25, 25, 25)
+                                        .addComponent(btnCalc))
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblResultado)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(rbtSoma))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(rbtSub)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel1)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -118,11 +170,11 @@ public class telaswing extends javax.swing.JFrame {
                     .addComponent(txtN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalc)
                     .addComponent(lblResultado))
-                .addGap(18, 18, 18)
-                .addComponent(rbtSoma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtSub)
-                .addGap(96, 96, 96))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -141,20 +193,20 @@ public class telaswing extends javax.swing.JFrame {
                 r=n1+n2;
             }else if (rbtSub.isSelected()){
                 r=n1-n2;
-            }/*else if(rbtMult.isSelected()){
+            }else if(rbtMult.isSelected()){
                 r=n1*n2;
             }else if (rbtDiv.isSelected()){
                 r=n1/n2;
-            }/*else if (rbtExp.isSelected()){
-                r=Math.pow(n1, n2));
-            }*/
-        
-        lblResultado.setText(Integer.toString(r));
-        //JOptionPane.showMessageDialog(null,"O resultado é: " + r);
-            
-        }
+            }else if (rbtExp.isSelected()){
+                r= (int)Math.pow(n1, n2);
+            }
+        if(rbtSoma.isSelected()==true||rbtSub.isSelected()==true||rbtMult.isSelected()==true||rbtDiv.isSelected()==true||rbtExp.isSelected()==true){
+            lblResultado.setText(Integer.toString(r));
+        }else{
+                JOptionPane.showMessageDialog(null,"Selecione ao menos um dos operadores");
+            }
     }//GEN-LAST:event_btnCalcActionPerformed
-
+}
     /**
      * @param args the command line arguments
      */
@@ -193,10 +245,15 @@ public class telaswing extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgopera;
     private javax.swing.JButton btnCalc;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblResultado;
+    private javax.swing.JRadioButton rbtDiv;
+    private javax.swing.JRadioButton rbtExp;
+    private javax.swing.JRadioButton rbtMult;
     private javax.swing.JRadioButton rbtSoma;
     private javax.swing.JRadioButton rbtSub;
     private javax.swing.JTextField txtN1;
